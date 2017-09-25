@@ -69,11 +69,12 @@ const Header = () => (
         font-size: 1rem;
         font-family: 'Avenir Next', sans-serif;
         cursor: pointer;
-        transition: all 250ms ease-in-out;
+        box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.125);
+        transition: all 125ms ease-in-out;
       }
 
       .video-banner > button:hover {
-        opacity: 0.85;
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
       }
 
     `}</style>
