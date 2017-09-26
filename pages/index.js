@@ -1,8 +1,8 @@
-import Header from '../components/Header';
+import LandingPage from '../components/LandingPage';
 
 const Index = () => (
   <div>
-    <Header />
+    <LandingPage />
     <style jsx global>{`
       :root {
         --step-up-5: 2em;
@@ -26,7 +26,7 @@ const Index = () => (
 
       h1, h2, h3,
       h4, h5, h6 {
-        margin: 0.5rem;
+        margin: 0.25rem;
         font-family: 'Avenir Next', sans-serif;
         font-weight: 700;
         line-height: 1.6;

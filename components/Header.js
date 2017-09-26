@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import Navbar from './Navbar';
 
 const YAMMAS_VIDEO = 'https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/videos/yammasapp.webm';
@@ -17,7 +18,9 @@ const Header = () => (
       <h3>
         Το μόνο που χρειάζεσαι για ένα κέρασμα είναι μια αφορμή
       </h3>
-      <button>Μπες στην παρέα</button>
+      <Link to="Section2" duration={1000} delay={25} smooth>
+        <button className="cta-button">Μπες στην παρέα</button>
+      </Link>
     </div>
     <style jsx>{`
       .header-container {
@@ -46,34 +49,39 @@ const Header = () => (
         left: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
-        color: white;
+        color: #f4f4f4;
         text-align: center;
         font-size: 1.25em;
         //background: rgba(255,255,255,0.125);
       }
 
       .video-banner > h3 {
-        color: #f7f7f7;
+        color: #f4f4f4;
         font-weight: 500;
+        //opacity: 0.75;
       }
 
-      .video-banner > button {
+      .cta-button {
         display: inline-block;
         background: #d32f2f;
-        margin-top: 1.5rem;
+        margin-top: 1.25rem;
         outline: 0;
         color: #fff;
         border-radius: 32px;
-        padding: 1rem 3rem;
+        padding: 0.85rem 3rem;
         border: 2px solid #c73030;
         font-size: 1rem;
         font-family: 'Avenir Next', sans-serif;
         cursor: pointer;
-        box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.125);
+        box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         transition: all 125ms ease-in-out;
       }
 
-      .video-banner > button:hover {
+      .cta-button:hover {
+        box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.25);
+      }
+
+      .cta-button:active {
         box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
       }
 
