@@ -24,6 +24,7 @@ const Header = () => (
     </div>
     <style jsx>{`
       .header-container {
+        position: relative;
         display: block;
         min-width: 100%;
         min-height: 100vh;

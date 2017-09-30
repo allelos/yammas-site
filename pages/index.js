@@ -1,7 +1,13 @@
+import Head from 'next/head';
 import LandingPage from '../components/LandingPage';
 
 const Index = () => (
   <div>
+    <Head>
+      <title>Yammas!</title>
+      <meta charSet='utf-8' />
+      <meta name='viewport' content='width=device-width' />
+    </Head>
     <LandingPage />
     <style jsx global>{`
       :root {
@@ -24,10 +30,16 @@ const Index = () => (
         font-size: 16px;
       }
 
+      @media (max-width: 768px) {
+        body {
+          font-size: 60%;
+        }
+      }
+
       h1, h2, h3,
       h4, h5, h6 {
         margin: 0.25rem;
-        font-family: 'Avenir Next', sans-serif;
+        font-family: 'Proxima Nova', sans-serif;
         font-weight: 700;
         line-height: 1.6;
       }
