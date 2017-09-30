@@ -10,7 +10,7 @@ export const testimonials = `
   .testimonials-title {
     flex: 1 100%;
     font-weight: 700;
-    font-size: 22px;
+    font-size: var(--step-up-3);
     color: white;
     margin-bottom: 2rem;
   }
@@ -20,15 +20,15 @@ export const testimonials = `
   .testimonials-grid {
     display: flex;
     flex: 1;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     margin-bottom: 2rem;
   }
   .testimonials-grid--row {
     display: flex;
-    width: 90%;
-    flex: 1 auto;
-    flex-flow: row nowrap;
+    width: 60%;
+    flex: 1;
+    flex-flow: row wrap;
   }
   .testimonials-grid--col {
     display: flex;
@@ -65,8 +65,10 @@ export const testimonials = `
   .star {
     background: #0c1f35;
   }
+  .maxmag {
+    background: #ff0000;
+  }
   .startupper,
-  .maxmag,
   .ka-business,
   .karfitsa {
     background: #f7f7f7;
@@ -96,5 +98,13 @@ export const testimonials = `
   }
   .ka-business {
     padding: 32px;
+  }
+  @media (max-width: 768px) {
+    .testimonials-grid--row {
+      width: 90%;
+    }
+    .img-container {
+      padding: 18px;
+    }      
   }
 `

@@ -41,15 +41,15 @@ const Testimonials = () => (
           </div>
         </div>
         <div className="testimonials-grid--col">
-          <div className="img-container maxmag">
-            <a target="_blank" href="http://www.maxmag.gr/synenteukseis/yammas/" />
-            <img className="testimonials-img" src="http://www.maxmag.gr/wp-content/uploads/wordpress-mobile-pack-pro/logo_1506438571.png" />
-          </div>
-        </div>
-        <div className="testimonials-grid--col">
           <div className="img-container ka-business">
             <a target="_blank" href="http://www.ka-business.gr/pages/innovation/13948/o-sygxronos-kai-o-kainotomikos-tropos-kerasmatos" />
             <img className="testimonials-img" src="http://www.ka-business.gr/resources/images/logo.png" />
+          </div>
+        </div>
+        <div className="testimonials-grid--col">
+          <div className="img-container maxmag">
+            <a target="_blank" href="http://www.maxmag.gr/synenteukseis/yammas/" />
+            <img className="testimonials-img" src="http://www.maxmag.gr/wp-content/uploads/2015/06/maxmag_white.png" />
           </div>
         </div>
         <div className="testimonials-grid--col">
