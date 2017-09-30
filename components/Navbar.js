@@ -1,13 +1,13 @@
-const YAMMAS_LOGO = '/public/images/Yammas-01.png';
+const YAMMAS_LOGO = '../public/images/logo_white_.png'
 const Navbar = () => (
   <div className="navbar-container">
     <div className="navbar-logo">
-      <img src="https://yammas-s3-bucket-storage.s3.amazonaws.com/img/logo2.png" alt="Yammas Logo" />
+      <img src="https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/yammas_logo_white.png" alt="Yammas Logo" />
     </div>
     <div className="navbar-links">
       <ul>
         <li>Επικοινωνία</li>
-        <li>Επαγγελματίες</li>
+        <li>Για επιχειρήσεις</li>
       </ul>
     </div>
     <style jsx>{`
@@ -29,6 +29,12 @@ const Navbar = () => (
         height: 56px;
         cursor: pointer;
       }
+
+      @media (max-width: 767px) {
+        .navbar-logo > img {
+          height: 32px;
+        }
+      }
       .navbar-links {
         flex: 1;
       }
@@ -45,7 +51,7 @@ const Navbar = () => (
         transition: all 250ms ease-in-out;
       }
       .navbar-links > ul > li:hover {
-        color: #d32f2f;
+        color: #e4233c;
       }
 
     `}</style>

@@ -1,5 +1,9 @@
+import Typekit from 'react-typekit';
 import Head from 'next/head';
+import FontAwesome from 'react-fontawesome';
+
 import LandingPage from '../components/LandingPage';
+
 
 const Index = () => (
   <div>
@@ -7,8 +11,13 @@ const Index = () => (
       <title>Yammas!</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width' />
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
     </Head>
     <LandingPage />
+    <Typekit kitId="rfe5wwj" />
     <style jsx global>{`
       :root {
         --step-up-5: 2em;
@@ -28,20 +37,18 @@ const Index = () => (
         padding: 0;
         margin: 0;
         font-size: 16px;
+        line-height: 1.4em;
       }
 
-      @media (max-width: 768px) {
-        body {
-          font-size: 60%;
-        }
-      }
+     
 
       h1, h2, h3,
       h4, h5, h6 {
-        margin: 0.25rem;
-        font-family: 'Proxima Nova', sans-serif;
-        font-weight: 700;
-        line-height: 1.6;
+        margin: 0 0 0.125em 0;
+        font-family: 'proxima-nova', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.4em;
       }
 
       h1 {
@@ -65,8 +72,16 @@ const Index = () => (
       }
 
       li {
-        font-family: 'Avenir Next', sans-serif;
+        font-family: 'proxima-nova', sans-serif;
         font-size: var(--step-down-1);
+        font-style: normal;
+        font-weight: 300;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 12px;
+        }
       }
     `}</style>
   </div>

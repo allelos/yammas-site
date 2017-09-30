@@ -29,7 +29,6 @@ const Header = () => (
         min-width: 100%;
         min-height: 100vh;
         overflow: hidden;
-        z-index: -2;        
       }
       .video-inner {
         position: absolute;
@@ -51,28 +50,30 @@ const Header = () => (
         width: 100%;
         transform: translate(-50%, -50%);
         color: #f4f4f4;
-        text-align: center;
         font-size: 1.25em;
+        text-align: center;
         //background: rgba(255,255,255,0.125);
       }
 
       .video-banner > h3 {
         color: #f4f4f4;
-        font-weight: 500;
+        font-weight: 300;
         //opacity: 0.75;
       }
 
       .cta-button {
         display: inline-block;
         background: #d32f2f;
-        margin-top: 1.25rem;
+        margin-top: 1.875em;
         outline: 0;
         color: #fff;
         border-radius: 32px;
-        padding: 0.85rem 3rem;
+        padding: 0.75rem 3rem;
         border: 2px solid #c73030;
         font-size: 1rem;
-        font-family: 'Avenir Next', sans-serif;
+        font-family: 'proxima-soft', sans-serif;
+        font-style: normal;
+        font-weight: 300;
         cursor: pointer;
         box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         transition: all 125ms ease-in-out;
@@ -86,6 +87,11 @@ const Header = () => (
         box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
       }
 
+      @media (max-width: 425px) {
+        .cta-button {
+          padding: 0.5rem 3rem;
+        } 
+      }
     `}</style>
   </div>
 );

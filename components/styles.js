@@ -9,18 +9,19 @@ export const testimonials = `
   }
   .testimonials-title {
     flex: 1 100%;
-    font-weight: 700;
     font-size: var(--step-up-3);
     color: white;
     margin-bottom: 2rem;
   }
   .testimonials-title > * {
     text-align: center;
+    font-weight: 800;
+    font-style: normal;
   }
   .testimonials-grid {
     display: flex;
     flex: 1;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     align-items: center;
     margin-bottom: 2rem;
   }
@@ -104,7 +105,15 @@ export const testimonials = `
       width: 90%;
     }
     .img-container {
-      padding: 18px;
+      padding: 32px;
+    }      
+  }
+  @media (max-width: 425px) {
+    .testimonials-title {
+      font-size: var(--step-up-1);
+    }
+    .img-container {
+      padding: 20px;
     }      
   }
 `

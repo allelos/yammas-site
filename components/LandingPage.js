@@ -7,6 +7,8 @@ import {
 
 import Header from '../components/Header';
 import Testimonials from '../components/Testimonials';
+import Subscribe from '../components/Subscribe';
+import Footer from '../components/Footer';
 
 const Section1 = () => (
   <section>
@@ -52,9 +54,9 @@ class LandingPage extends React.Component {
         <Header />
         <Testimonials />
         <Element name="Section2">
-          <Section2 />
+          <Subscribe />
         </Element>
-        <Section1 />
+        <Footer />
       </div>
     );
   }
