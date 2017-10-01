@@ -38,14 +38,12 @@ const Footer = () => (
         </div>
     </div>
     <div className="right">
-      <div class="right-container">
         <div className="awards-title">
           <h5>Διακρίσεις</h5>
         </div>
         <div className="awards">
           <img src="https://ovolus.com/sites/all/themes/mazeblock_theme/images/befinnovative.svg" />
         </div>
-      </div>
     </div>
     <style jsx>{`
       footer {
@@ -70,14 +68,8 @@ const Footer = () => (
         align-items: center;
       }
       .right {
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-end;
-      }
-      .right-container {
-        display: flex;
-        flex: 1 1 auto;
-        flex-flow: row wrap;
-        align-items: flex-start;
       }
       .column-title > h5 {
         font-weight: 300;
@@ -132,7 +124,7 @@ const Footer = () => (
         display: flex;
         flex: 1 1 100%;
         align-items: flex-end;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
       }
       .awards-title > h5 {
         font-weight: 300;
@@ -153,7 +145,23 @@ const Footer = () => (
       .column-title {
         animation: pulse 2s infinite;
       }
-
+      @media (max-width: 768px) {
+        .center {
+          order: 1;
+        }
+        .right {
+          order: 2;
+          align-items: center;
+        }
+        .left {
+          order: 3;
+          align-items: center;
+        }
+        footer > div {
+          flex: 1 100%;
+          margin-bottom: 2rem;
+        }
+      }
       @keyframes pulse {
         0% { tranform: scale(1); }
         100% { transform: scale(1.2); }

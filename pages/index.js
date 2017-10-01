@@ -4,6 +4,7 @@ import FontAwesome from 'react-fontawesome';
 
 import LandingPage from '../components/LandingPage';
 
+const YAMMAS_FAVICON = '../public/images/favicon.png';
 
 const Index = () => (
   <div>
@@ -11,6 +12,10 @@ const Index = () => (
       <title>Yammas!</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width' />
+      <link
+        rel="icon"
+        href='https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/Yammas-02.png'
+      />
       <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"

@@ -5,20 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p 8000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "next": "^3.2.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "react-fontawesome": "^1.6.1",
-    "react-loading": "^0.1.4",
     "react-mailchimp-subscribe": "^1.0.2",
+    "react-motion": "^0.5.1",
     "react-scroll": "^1.5.4",
-    "react-spinkit": "^3.0.0",
     "react-typekit": "^1.1.0"
   }
 }

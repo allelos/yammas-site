@@ -1,4 +1,5 @@
 import React from "react";
+import { Motion, spring } from 'react-motion';
 import PropTypes from "prop-types";
 import jsonp from "jsonp";
 import FontAwesome from 'react-fontawesome';
@@ -10,9 +11,31 @@ class SubscribeForm extends React.Component {
     super(props, ...args)
     this.state = {
       status: null,
-      msg: null
+      msg: null,
+      focused: false,
     }
   }
+
+  initialInputStyles = () => ({
+    width: spring(150),
+  })
+
+  finalInputStyles = () => ({
+    width: spring(250),
+  })
+
+  onFocus = e => {
+    e.preventDefault();    
+    this.setState({ focused: true });
+    return;
+  }
+
+  onBlur = e => {
+    e.preventDefault();    
+    this.setState({ focused: false });
+    return;
+  }
+
   onSubmit = e => {
     e.preventDefault()
     if (!this.input.value || this.input.value.length < 5 || this.input.value.indexOf("@") === -1) {
@@ -49,21 +72,30 @@ class SubscribeForm extends React.Component {
     )
   }
   render() {
-    const { action, messages, className, style, styles } = this.props
-    const { status } = this.state
+    const { action, messages, className, style, styles } = this.props;
+    const { status } = this.state;
+    let inputStyles = this.state.focused ? this.finalInputStyles() : this.initialInputStyles();
     return (
-      <div className="subscribe-form-container" style={style}>
+      <div className="subscribe-form-container">
         <form action={action} method="post" noValidate className="subscribe-form">
-          <div className="subscribe-form-inner">
-            <input
-              className={status === "error" ? "input-box-error" : "input-box"}
-              ref={node => (this.input = node)}
-              type="email"
-              defaultValue=""
-              name="EMAIL"
-              required={true}
-              placeholder={'Email...'}
-            />
+          <div className="subscribe-form-inner" >
+            <Motion style={inputStyles}>
+              {({width}) =>
+                <input
+                  className={"input-box"}
+                  ref={node => (this.input = node)}
+                  type="email"
+                  defaultValue=""
+                  name="EMAIL"
+                  required={true}
+                  placeholder={'Email...'}
+                  style={{ width: width, }}
+                  onFocus={this.onFocus}
+                  onBlur={this.onBlur}
+                />
+              }
+            </Motion>
+            { console.log(this.state.focused) }
             <button
               className="subscribe-form--button"
               disabled={this.state.status === "sending" || this.state.status === "success"}
@@ -102,36 +134,23 @@ class SubscribeForm extends React.Component {
           }
           .input-box[type="email"] {
             box-sizing: border-box;
-            padding: 0.875rem 1rem;
+            padding: 0.875em 1em;
             font-family: "proxima-soft", sans-serif;
             border-top-left-radius: 32px;
             border-bottom-left-radius: 32px;
             border: 1px solid #ccc;
             font-weight: 300;
             font-style: normal;
-            font-size: 1rem;
+            font-size: 1em;
             color: #333;
             background: #fff;
             outline: none;
           }
-          .input-box-error[type="email"] {
-            box-sizing: border-box;
-            padding: 0.875rem 1rem;
-            font-family: "proxima-soft", sans-serif;
-            border-top-left-radius: 32px;
-            border-bottom-left-radius: 32px;
-            border: 1px solid #ccc;
-            font-weight: 300;
-            font-style: normal;
-            font-size: 1rem;
-            color: #d32f2f;
-            outline: none;
-          }
           .subscribe-form--button {
             box-sizing: border-box;
-            padding: 0.875rem 1.5rem;
+            padding: 0.875em 1.5em;
             min-width: 120px;
-            font-size: 1rem;
+            font-size: 1em;
             font-family: "proxima-soft", sans-serif;
             font-weight: 500;
             font-style: normal;
@@ -145,10 +164,7 @@ class SubscribeForm extends React.Component {
             cursor: pointer;
           }
           .subscribe-form--button:hover {
-            box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.25);
-          }
-          .subscribe-form--button:active {
-            box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
+            background: #f7f7f7;
           }
           .button-container {
             display: block;
@@ -159,6 +175,16 @@ class SubscribeForm extends React.Component {
           }
           .button-spinner {
             color: #d32f2f;
+          }
+          
+          @media (max-width: 768px) {
+            .subscribe-form--button {
+              min-width: 64px;
+              max-width: 250px;
+              width: 64px;
+              padding: 0.875em 0.5em;
+              font-size: 
+            }
           }
         `}</style>
       </div>

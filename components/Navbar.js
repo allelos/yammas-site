@@ -36,7 +36,7 @@ const Navbar = () => (
         }
       }
       .navbar-links {
-        flex: 1;
+        flex: 2;
       }
       .navbar-links > ul {
         text-align: right;
