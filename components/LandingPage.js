@@ -10,23 +10,6 @@ import Testimonials from '../components/Testimonials';
 import Subscribe from '../components/Subscribe';
 import Footer from '../components/Footer';
 
-const Section1 = () => (
-  <section>
-    <style jsx>{`
-      height: 640px;
-      background: #e6af4b;
-    `}</style>
-  </section>
-);
-
-const Section2 = () => (
-  <section>
-    <style jsx>{`
-      height: 640px;
-      background: #373737;
-    `}</style>
-  </section>
-);
 
 class LandingPage extends React.Component {
   constructor(props) {

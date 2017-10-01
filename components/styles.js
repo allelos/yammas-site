@@ -1,14 +1,16 @@
 export const testimonials = `
   section {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     background: #e6af4b;
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
   .testimonials-title {
-    flex: 1 100%;
+    flex: 1;
+    flex-basis: 100%;
     font-size: var(--step-up-3);
     color: white;
     margin-bottom: 2rem;
@@ -21,7 +23,10 @@ export const testimonials = `
   .testimonials-grid {
     display: flex;
     flex: 1;
-    flex-flow: column wrap;
+    //flex-flow: column wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
     align-items: center;
     margin-bottom: 2rem;
   }

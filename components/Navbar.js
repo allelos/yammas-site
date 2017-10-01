@@ -1,9 +1,14 @@
+import Link from 'next/link';
+
+
 const YAMMAS_LOGO = '../public/images/logo_white_.png'
 const Navbar = () => (
   <div className="navbar-container">
-    <div className="navbar-logo">
-      <img src="https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/yammas_logo_white.png" alt="Yammas Logo" />
-    </div>
+    <Link href="/">
+      <a className="navbar-logo">
+        <img src="https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/yammas_logo_white.png" alt="Yammas Logo" />
+      </a>
+    </Link>
     <div className="navbar-links">
       <ul>
         <li>Επικοινωνία</li>

@@ -156,6 +156,7 @@ const Footer = () => (
         .left {
           order: 3;
           align-items: center;
+          margin-top: 2rem;
         }
         footer > div {
           flex: 1 100%;

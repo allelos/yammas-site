@@ -77,6 +77,7 @@ const Header = () => (
         cursor: pointer;
         box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         transition: all 125ms ease-in-out;
+        cursor: pointer;
       }
 
       .cta-button:hover {
@@ -87,7 +88,13 @@ const Header = () => (
         box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
       }
 
-      @media (max-width: 425px) {
+      @media (max-width: 768px) {
+        .header-container {
+          background: url('/static/img/pattern.png');
+        }
+        .video-inner {
+          display: none;
+        }
         .cta-button {
           padding: 0.5rem 3rem;
         } 

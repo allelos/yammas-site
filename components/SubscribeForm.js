@@ -119,7 +119,7 @@ class SubscribeForm extends React.Component {
         <style jsx>{`
           .subscribe-form-container {
             display: flex;
-            flex: 1;
+            flex: 1 100%;
             justify-content: center;
             align-items: center;
           }
