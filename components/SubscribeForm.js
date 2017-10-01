@@ -95,7 +95,6 @@ class SubscribeForm extends React.Component {
                 />
               }
             </Motion>
-            { console.log(this.state.focused) }
             <button
               className="subscribe-form--button"
               disabled={this.state.status === "sending" || this.state.status === "success"}
