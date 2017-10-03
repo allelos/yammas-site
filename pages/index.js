@@ -76,7 +76,7 @@ const Index = () => (
 
       li {
         font-family: 'proxima-nova', sans-serif;
-        font-size: var(--step-down-1);
+        font-size: 1em;
         font-style: normal;
         font-weight: 300;
       }
