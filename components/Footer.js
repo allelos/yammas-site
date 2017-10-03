@@ -142,9 +142,6 @@ const Footer = () => (
         padding: 4px;
         border-radius: 4px;
       }
-      .column-title {
-        animation: pulse 2s infinite;
-      }
       @media (max-width: 768px) {
         .center {
           order: 1;
@@ -162,10 +159,6 @@ const Footer = () => (
           flex: 1 100%;
           margin-bottom: 2rem;
         }
-      }
-      @keyframes pulse {
-        0% { tranform: scale(1); }
-        100% { transform: scale(1.2); }
       }
     `}</style>
   </footer>
