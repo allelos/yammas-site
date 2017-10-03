@@ -37,7 +37,7 @@ const Navbar = () => (
 
       @media (max-width: 767px) {
         .navbar-logo > img {
-          height: 32px;
+          height: 48px;
         }
       }
       .navbar-links {
