@@ -10,8 +10,12 @@ const Header = () => (
       autoPlay
       loop
       muted
+      poster="/static/img/pattern.png"
     >
-      <source src={YAMMAS_VIDEO} type="video/webm" />
+      <source
+        src={YAMMAS_VIDEO}
+        type="video/webm"
+      />
     </video>
     <div className="video-banner">
       <h1>Yammas, ο σύγχρονος τρόπος κεράσματος.</h1>
@@ -89,12 +93,6 @@ const Header = () => (
       }
 
       @media (max-width: 768px) {
-        .header-container {
-          background: url('/static/img/pattern.png');
-        }
-        .video-inner {
-          display: none;
-        }
         .cta-button {
           padding: 0.5rem 3rem;
         } 
