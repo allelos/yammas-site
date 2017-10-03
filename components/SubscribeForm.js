@@ -17,12 +17,12 @@ class SubscribeForm extends React.Component {
   }
 
   initialInputStyles = () => ({
-    width: spring(150),
-  })
+    inputWidth: spring(150),
+  });
 
   finalInputStyles = () => ({
-    width: spring(250),
-  })
+    inputWidth: spring(250),
+  });
 
   onFocus = e => {
     e.preventDefault();    
@@ -34,6 +34,11 @@ class SubscribeForm extends React.Component {
     e.preventDefault();    
     this.setState({ focused: false });
     return;
+  }
+
+  handleChange = e => {
+    e.preventDefault();
+    this.setState({ status: "typing" });
   }
 
   onSubmit = e => {
@@ -80,7 +85,7 @@ class SubscribeForm extends React.Component {
         <form action={action} method="post" noValidate className="subscribe-form">
           <div className="subscribe-form-inner" >
             <Motion style={inputStyles}>
-              {({width}) =>
+              {({...inputStyles}) =>
                 <input
                   className={"input-box"}
                   ref={node => (this.input = node)}
@@ -89,9 +94,10 @@ class SubscribeForm extends React.Component {
                   name="EMAIL"
                   required={true}
                   placeholder={'Email...'}
-                  style={{ width: width, }}
+                  style={{ width: inputStyles.inputWidth, }}
                   onFocus={this.onFocus}
                   onBlur={this.onBlur}
+                  onChange={this.handleChange}
                 />
               }
             </Motion>
@@ -123,8 +129,6 @@ class SubscribeForm extends React.Component {
             justify-content: center;
             align-items: center;
           }
-          .subscribe-form {
-          }
           .subscribe-form-inner {
             min-width: 100%;
             box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.25);
@@ -147,12 +151,14 @@ class SubscribeForm extends React.Component {
           }
           .subscribe-form--button {
             box-sizing: border-box;
-            padding: 0.875em 1.5em;
-            min-width: 120px;
+            padding-top: 0.875em;
+            padding-bottom: 0.875em;
+            width: 100px;
             font-size: 1em;
             font-family: "proxima-soft", sans-serif;
             font-weight: 500;
             font-style: normal;
+            text-align: center;
             background: #fff;
             color: #d32f2f;
             border: none;
@@ -165,13 +171,6 @@ class SubscribeForm extends React.Component {
           .subscribe-form--button:hover {
             background: #f7f7f7;
           }
-          .button-container {
-            display: block;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: pink;
-          }
           .button-spinner {
             color: #d32f2f;
           }
@@ -180,9 +179,6 @@ class SubscribeForm extends React.Component {
             .subscribe-form--button {
               min-width: 64px;
               max-width: 250px;
-              width: 64px;
-              padding: 0.875em 0.5em;
-              font-size: 
             }
           }
         `}</style>
