@@ -17,7 +17,7 @@ class SubscribeForm extends React.Component {
   }
 
   initialInputStyles = () => ({
-    inputWidth: spring(150),
+    inputWidth: spring(125),
   });
 
   finalInputStyles = () => ({
@@ -141,7 +141,7 @@ class SubscribeForm extends React.Component {
             font-family: "proxima-soft", sans-serif;
             border-top-left-radius: 32px;
             border-bottom-left-radius: 32px;
-            border: 1px solid #ccc;
+            border: 1px solid white;
             font-weight: 300;
             font-style: normal;
             font-size: 1em;
@@ -167,9 +167,12 @@ class SubscribeForm extends React.Component {
             border-top-right-radius: 32px;
             border-bottom-right-radius: 32px;
             cursor: pointer;
+            transition: all 250ms ease-in-out;
           }
           .subscribe-form--button:hover {
-            background: #f7f7f7;
+            background: #eee;
+            border: 1px solid #eee;
+
           }
           .button-spinner {
             color: #d32f2f;
