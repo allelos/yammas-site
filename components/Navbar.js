@@ -2,16 +2,24 @@ import Link from 'next/link';
 
 
 const YAMMAS_LOGO = '../public/images/logo_white_.png'
-const Navbar = () => (
-  <div className="navbar-container">
+const Navbar = ({ ...props }) => (
+  <div className={`navbar-container ${props.border ? 'border' : 'noBorder' }`}>
     <Link href="/">
-      <a className="navbar-logo">
-        <img src="https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/yammas_logo_white.png" alt="Yammas Logo" />
-      </a>
+      { props.theme === 'dark' ?
+        <a className="navbar-logo">
+          <img src="/static/img/Yammas-01.JPG" alt="Yammas Logo" />
+        </a>
+        :
+        <a className="navbar-logo">
+          <img src="https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/yammas_logo_white.png" alt="Yammas Logo" />
+        </a>
+      }
     </Link>
-    <div className="navbar-links">
+    <div className={props.theme === 'dark' ? 'navbar-links dark' : 'navbar-links light'}>
       <ul>
-        <li>Επικοινωνία</li>
+        <Link href="/contact">
+          <li><a>Επικοινωνία</a></li>
+        </Link>
         <li>Για επιχειρήσεις</li>
       </ul>
     </div>
@@ -21,9 +29,11 @@ const Navbar = () => (
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 16px;
-        //background: rgba(255,255,255,0.125);
+        padding: 8px;
         z-index: 1;
+      }
+      .navbar-container.border {
+        border-bottom: 1px solid #f4f4f4;
       }
       .navbar-logo {
         flex: 1;
@@ -31,7 +41,7 @@ const Navbar = () => (
       .navbar-logo > img {
         display: block;
         width: auto;
-        height: 56px;
+        height: 64px;
         cursor: pointer;
       }
 
@@ -49,14 +59,22 @@ const Navbar = () => (
       }
       .navbar-links > ul > li {
         display: inline;
-        color: #f7f7f7;
         margin-left: 1em;
         cursor: pointer;
         padding-bottom: 4px;
         transition: all 250ms ease-in-out;
       }
-      .navbar-links > ul > li:hover {
-        color: #e4233c;
+      .navbar-links.dark > ul > li {
+        color: #d32f2f;
+      }
+      .navbar-links.light > ul > li {
+        color: #ffffff;
+      }
+      .navbar-links.dark > ul > li:hover {
+        color: #9c2222;
+      }
+      .navbar-links.light > ul > li:hover {
+        color: #d32f2f;
       }
 
     `}</style>
