@@ -6,10 +6,10 @@ const Footer = () => (
   <footer>
     <div className="left">
       <div className="links">
-        <Link href="">
+        <Link href="/business">
           <a href="" className="link">Για επιχειρήσεις</a>
         </Link>
-        <Link href="/">
+        <Link href="/contact">
           <a href="" className="link">Επικοινωνία</a>
         </Link>
       </div>

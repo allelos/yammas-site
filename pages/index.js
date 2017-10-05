@@ -1,4 +1,3 @@
-import FontAwesome from 'react-fontawesome';
 import LandingPage from '../components/LandingPage';
 
 

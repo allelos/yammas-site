@@ -14,8 +14,8 @@ export default class YammasDocument extends Document {
       <html>
         <Head>
           <title>Yammas!</title>
-          <meta charSet='utf-8' />
-          <meta name='viewport' content='width=device-width' />
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
           <link
             rel="icon"
             href='https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/Yammas-02.png'

@@ -20,16 +20,20 @@ const Navbar = ({ ...props }) => (
         <Link href="/contact">
           <li><a>Επικοινωνία</a></li>
         </Link>
-        <li>Για επιχειρήσεις</li>
+        <Link href="/business">
+          <li>Για επιχειρήσεις</li>
+        </Link>
       </ul>
     </div>
     <style jsx>{`
       .navbar-container {
+        box-sizing: border-box;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 8px;
+        height: 64px;
         z-index: 1;
       }
       .navbar-container.border {
@@ -47,7 +51,7 @@ const Navbar = ({ ...props }) => (
 
       @media (max-width: 767px) {
         .navbar-logo > img {
-          height: 48px;
+          height: 64px;
         }
       }
       .navbar-links {
