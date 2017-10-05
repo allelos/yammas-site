@@ -1,7 +1,8 @@
 import FontAwesome from 'react-fontawesome';
 
 const ButtonIcon = ({ ...props }) => (
-  <button onClick={props.onClick} className="yammas-button--square">
+  <button onClick={props.onClick}
+    className={`yammas-button--square ${props.disabled && 'disabled' }`}>
     {props.children}
     <div className="yammas-button-icon--square">
       <FontAwesome
@@ -11,6 +12,7 @@ const ButtonIcon = ({ ...props }) => (
     </div>
     <style jsx>{`
       .yammas-button--square {
+        box-sizing: border-box;
         display: block;
         color: #ffffff;
         background: #d32f2f;
@@ -21,6 +23,10 @@ const ButtonIcon = ({ ...props }) => (
         font-size: 0.875em;
         font-family: "proxima-soft", sans-serif;
         font-weight: 300;
+      }
+      .yammas-button--square.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
       .yammas-button-icon--square {
         display: inline;

@@ -71,64 +71,61 @@ class Contact extends React.Component {
     return;
   }
   onSubmit = e => {
-    const { firstName, lastName, email, subject, message } = this.state;
-    console.log(firstName, lastName, email, subject, message);
+    const { firstName, lastName, email, subject, message, error } = this.state;
     e.preventDefault();
     this.postData(firstName, lastName, email, subject, message);
   }
   render() {
-
     return (
       <div>
         <MediaQuery maxWidth={768}>
           <div>
             <Navbar theme="dark" border/>
             <div className="contact-container">
-            { this.state.success ? 
-                  <div className="contact-form--success" style={{ height: '50vh', padding: '0 2em' }}>
-                    <div className="contact-form--success-icon">
-                      <FontAwesome
-                        name="check"
-                        style={{ color: '#a4d48f' }}
-                        size="2x"
-                      />
+              <div className="contact-form">
+                <div className="contact-form--header">
+                  <h2>Φόρμα επικοινωνίας</h2>
+                  <hr />
+                  { this.state.success &&
+                    <div className="contact-form--success">
+                      <div className="contact-form--success-icon">
+                        <FontAwesome
+                          name="check"
+                          style={{ color: '#a4d48f' }}
+                          size="2x"
+                        />
+                      </div>
+                      <div className="contact-form-success-message">
+                        <h4>Ευχαριστούμε πολύ, σύντομα θα μιλήσουμε εμείς μαζί σας</h4>
+                      </div>
                     </div>
-                    <div className="contact-form-success-message">
-                      <h4>Ευχαριστούμε πολύ, σύντομα θα μιλήσουμε εμείς μαζί σας</h4>
-                    </div>
-                  </div>
-                  :
-                  <div className="contact-form">
-                    <div className="contact-form--header">
-                      <h2>Φόρμα επικοινωνίας</h2>
-                      <hr />
-                    </div>
-                    <MediaQuery maxWidth={767}>
-                      <Input placeholder="Όνομα" onChange={e => onChange(e)} width={300} />
-                      <Input placeholder="Επώνυμο" onChange={e => onChange(e)} width={300} />
-                      <Input placeholder="Email επικοινωνίας" onChange={e => onChange(e)} width={300} />
-                      <Input placeholder="Θέμα μηνύματος" onChange={e => onChange(e)} width={300} />
-                      <TextArea placeholder="Μήνυμα" onChange={e => onChange(e)} width={300} />
-                    </MediaQuery>
-                    <MediaQuery minWidth={768} maxWidth={1024}>
-                      <Input placeholder="Όνομα" onChange={e => onChange(e)} width={400} />
-                      <Input placeholder="Επώνυμο" onChange={e => onChange(e)} width={400} />
-                      <Input placeholder="Email επικοινωνίας" onChange={e => onChange(e)} width={400} />
-                      <Input placeholder="Θέμα μηνύματος" onChange={e => onChange(e)} width={400} />
-                      <TextArea placeholder="Μήνυμα" onChange={e => onChange(e)} width={400} />
-                    </MediaQuery>
-                    <MediaQuery minWidth={1024}>
-                      <Input placeholder="Όνομα" onChange={e => onChange(e)} width={500} />
-                      <Input placeholder="Επώνυμο" onChange={e => onChange(e)} width={500} />
-                      <Input placeholder="Email επικοινωνίας" onChange={e => onChange(e)} width={500} />
-                      <Input placeholder="Θέμα μηνύματος" onChange={e => onChange(e)} width={500} />
-                      <TextArea placeholder="Μήνυμα" onChange={e => onChange(e)} width={500} />
-                    </MediaQuery>
-                    <div className="contact-form--submit">
-                      <Button>Αποστολή</Button>
-                    </div>
-                  </div>
-            }
+                  }
+                </div>
+                <MediaQuery maxWidth={767}>
+                  <Input placeholder="Όνομα" onChange={e => onChange(e)} width={300} />
+                  <Input placeholder="Επώνυμο" onChange={e => onChange(e)} width={300} />
+                  <Input placeholder="Email επικοινωνίας" onChange={e => onChange(e)} width={300} />
+                  <Input placeholder="Θέμα μηνύματος" onChange={e => onChange(e)} width={300} />
+                  <TextArea placeholder="Μήνυμα" onChange={e => onChange(e)} width={300} />
+                </MediaQuery>
+                <MediaQuery minWidth={768} maxWidth={1024}>
+                  <Input placeholder="Όνομα" onChange={e => onChange(e)} width={400} />
+                  <Input placeholder="Επώνυμο" onChange={e => onChange(e)} width={400} />
+                  <Input placeholder="Email επικοινωνίας" onChange={e => onChange(e)} width={400} />
+                  <Input placeholder="Θέμα μηνύματος" onChange={e => onChange(e)} width={400} />
+                  <TextArea placeholder="Μήνυμα" onChange={e => onChange(e)} width={400} />
+                </MediaQuery>
+                <MediaQuery minWidth={1024}>
+                  <Input placeholder="Όνομα" onChange={e => onChange(e)} width={500} />
+                  <Input placeholder="Επώνυμο" onChange={e => onChange(e)} width={500} />
+                  <Input placeholder="Email επικοινωνίας" onChange={e => onChange(e)} width={500} />
+                  <Input placeholder="Θέμα μηνύματος" onChange={e => onChange(e)} width={500} />
+                  <TextArea placeholder="Μήνυμα" onChange={e => onChange(e)} width={500} />
+                </MediaQuery>
+                <div className="contact-form--submit">
+                  <Button>Αποστολή</Button>
+                </div>
+              </div>
             </div>
             <Footer />
             <style jsx>{`
@@ -194,7 +191,7 @@ class Contact extends React.Component {
                     <img src="/static/img/Yammas-01.JPG" alt="Yammas logo" />
                   </Link>
                 </div>
-                { this.state.success ? 
+                { this.state.success &&
                   <div className="contact-form--success">
                     <div className="contact-form--success-icon">
                       <FontAwesome
@@ -204,41 +201,45 @@ class Contact extends React.Component {
                       />
                     </div>
                     <div className="contact-form-success-message">
-                      <h4>Ευχαριστούμε πολύ, σύντομα θα μιλήσουμε εμείς μαζί σας</h4>
-                    </div>
-                  </div>
-                  :
-                  <div>
-                    <div className="contact-form--header">
-                      <h2>Φόρμα επικοινωνίας</h2>
-                      <hr />
-                    </div>
-                    <MediaQuery maxWidth={767}>
-                      <Input placeholder="Όνομα" onChange={e => this.handleFirstName(e)} width={300} />
-                      <Input placeholder="Επώνυμο" onChange={e => this.handleLastName(e)} width={300} />
-                      <Input placeholder="Email επικοινωνίας" onChange={e => this.handleEmail(e)} width={300} />
-                      <Input placeholder="Θέμα μηνύματος" onChange={e => this.handleSubject(e)} width={300} />
-                      <TextArea placeholder="Μήνυμα" onChange={e => this.handleMessage(e)} width={300} />
-                    </MediaQuery>
-                    <MediaQuery minWidth={768} maxWidth={1023}>
-                      <Input placeholder="Όνομα" onChange={e => this.handleFirstName(e)} width={350} />
-                      <Input placeholder="Επώνυμο" onChange={e => this.handleLastName(e)} width={350} />
-                      <Input placeholder="Email επικοινωνίας" onChange={e => this.handleEmail(e)} width={350} />
-                      <Input placeholder="Θέμα μηνύματος" onChange={e => this.handleSubject(e)} width={350} />
-                      <TextArea placeholder="Μήνυμα" onChange={e => this.handleMessage(e)} width={350} />
-                    </MediaQuery>
-                    <MediaQuery minWidth={1024}>
-                      <Input placeholder="Όνομα" onChange={e => this.handleFirstName(e)} width={500} />
-                      <Input placeholder="Επώνυμο" onChange={e => this.handleLastName(e)} width={500} />
-                      <Input placeholder="Email επικοινωνίας" onChange={e => this.handleEmail(e)} width={500} />
-                      <Input placeholder="Θέμα μηνύματος" onChange={e => this.handleSubject(e)} width={500} />
-                      <TextArea placeholder="Μήνυμα" onChange={e => this.handleMessage(e)} width={500} />
-                    </MediaQuery>
-                    <div className="contact-form--submit">
-                      <Button onClick={e => this.onSubmit(e)}>Αποστολή</Button>
+                      <p>Ευχαριστούμε πολύ, σύντομα θα μιλήσουμε εμείς μαζί σας.</p>
                     </div>
                   </div>
                 }
+                <div className="contact-form--header">
+                  <h2>Φόρμα επικοινωνίας</h2>
+                  <hr />
+                </div>
+                <div>
+                  <MediaQuery maxWidth={767}>
+                    <Input placeholder="Όνομα" onChange={e => this.handleFirstName(e)} width={300} />
+                    <Input placeholder="Επώνυμο" onChange={e => this.handleLastName(e)} width={300} />
+                    <Input placeholder="Email επικοινωνίας" onChange={e => this.handleEmail(e)} width={300} />
+                    <Input placeholder="Θέμα μηνύματος" onChange={e => this.handleSubject(e)} width={300} />
+                    <TextArea placeholder="Μήνυμα" onChange={e => this.handleMessage(e)} width={300} />
+                  </MediaQuery>
+                  <MediaQuery minWidth={768} maxWidth={1023}>
+                    <Input placeholder="Όνομα" onChange={e => this.handleFirstName(e)} width={350} />
+                    <Input placeholder="Επώνυμο" onChange={e => this.handleLastName(e)} width={350} />
+                    <Input placeholder="Email επικοινωνίας" onChange={e => this.handleEmail(e)} width={350} />
+                    <Input placeholder="Θέμα μηνύματος" onChange={e => this.handleSubject(e)} width={350} />
+                    <TextArea placeholder="Μήνυμα" onChange={e => this.handleMessage(e)} width={350} />
+                  </MediaQuery>
+                  <MediaQuery minWidth={1024}>
+                    <Input placeholder="Όνομα" onChange={e => this.handleFirstName(e)} width={500} />
+                    <Input placeholder="Επώνυμο" onChange={e => this.handleLastName(e)} width={500} />
+                    <Input placeholder="Email επικοινωνίας" onChange={e => this.handleEmail(e)} width={500} />
+                    <Input placeholder="Θέμα μηνύματος" onChange={e => this.handleSubject(e)} width={500} />
+                    <TextArea placeholder="Μήνυμα" onChange={e => this.handleMessage(e)} width={500} />
+                  </MediaQuery>
+                  <div className="contact-form--submit">
+                    <Button 
+                      disabled={this.state.success}
+                      onClick={e => this.onSubmit(e)}
+                    >
+                      Αποστολή
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
             <style jsx>{`
@@ -267,6 +268,11 @@ class Contact extends React.Component {
                 justify-content: space-between;
                 align-items: center;
               }
+              .contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
               .contact-form--header > hr {
                 display: block;
                 box-sizing: border-box;
@@ -282,12 +288,13 @@ class Contact extends React.Component {
                 margin-bottom: 3rem;
               }
               .contact-form--submit {
-                float: right;
+                display: flex;
+                justify-content: flex-end;
               }
               .contact-form--logo {
                 display: flex;
                 justify-content: center;
-                margin-bottom: 1rem;
+                margin-bottom: 1em;
               }
               .contact-form--logo > img {
                 cursor: pointer;
@@ -299,18 +306,36 @@ class Contact extends React.Component {
                 cursor: pointer;
               }
               .contact-form--success {
+                box-sizing: border-box;
                 display: flex;
-                width: 350px;
-                color: #333;
                 align-items: center;
-                justify-content: space-between;
+                padding: 0.5em 1em;
+                margin-bottom: 2em;
+                border: 2px solid #a4d48f;
+                color: #333;
+                background: rgba(164, 212, 143, 0.2);
               }
               .contact-form--success-icon {
                 display: flex;
-                margin-right: 1.5em;
+                margin-right: 0.5em;
               }
               .contact-form-success-message {
                 display: flex;
+              }
+              @media (max-width: 767px) {
+                .contact-form--success {
+                  width: 300px;
+                }
+              }
+              @media (min-width: 768px) and (max-width: 1023px) {
+                .contact-form--success {
+                  width: 350px;
+                }
+              }
+              @media (min-width: 1024px) {
+                .contact-form--success {
+                  width: 500px;
+                }
               }
             `}</style>
           </div>

@@ -86,12 +86,18 @@ export default class YammasDocument extends Document {
             }
 
             li {
-              font-family: 'proxima-nova', sans-serif;
+              font-family: 'proxima-soft', sans-serif;
               font-size: 1em;
               font-style: normal;
               font-weight: 300;
             }
-
+            
+            p { 
+              font-family: 'proxima-soft', sans-serif;
+              font-size: 1em;
+              font-style: normal;
+              font-weight: 300;
+            }
             @media (max-width: 768px) {
               body {
                 font-size: 12px;
