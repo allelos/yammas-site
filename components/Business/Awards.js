@@ -34,8 +34,12 @@ const Awards = () => (
         padding-left: 1em;
         padding-right: 1em;
       }
+      .awards--right > h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
       .awards--right > p {
-        font-size: 0.5em;
+        font-size: 0.75em;
         text-align: right;
         line-height: 1.4;
         color: #f7f7f7;
@@ -59,20 +63,26 @@ const Awards = () => (
       }
       @media (max-width: 767px) {
         .awards--container {
-          min-height: 750px;
+          //min-height: 750px;
         }
         .awards--left {
-          flex: 1 100%;
+          flex-basis: 100%;
+          padding-top: 4em;
+          padding-bottom: 4em;
           order: 2;
-          padding-top: 2em;
-          padding-bottom: 2em;
         }
         .awards--right {
-          flex: 1 100%;
-          order: 1;
+          flex-basis: 100%;
           align-items: center;
+          order: 1;
+          padding-top: 1em;
+          padding-bottom: 1em;
         }
-        .awards--right > p{
+        .awards--right > h1 {
+          margin-top: 0;
+        }
+        .awards--right > p {
+          font-size: 0.75em;
           text-align: center;
         }
       }

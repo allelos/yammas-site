@@ -102,8 +102,14 @@ const WhyYammas = () => (
         padding-left: 1em;
         padding-right: 1em;
       }
+      .whyyammas--left > h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.1;
+      }
       .whyyammas--right {
         display: flex;
+        flex-wrap: wrap;
         flex: 1 50%;
         align-items: center;
         background: #f4f4f4;
@@ -128,17 +134,16 @@ const WhyYammas = () => (
       }
       @media (max-width: 767px) {
         .whyyammas--container {
-          min-height: 750px;
         }
         .whyyammas--left {
-          flex: 1 100%;
-          font-size: 1em;
-          padding-top: 1em;
+          flex-basis: 100%;
           padding-bottom: 1em;
+          padding-top: 1em;
         }
         .whyyammas--right {
-          font-size: 1em;
-          flex: 1 100%;
+          flex-basis: 100%;
+          padding-top: 2em;
+          padding-bottom: 2em;
         }
       } 
     `}</style>

@@ -26,26 +26,25 @@ const Header = () => (
       }
       .business-header--content > h1 {
         color: #333;
+        margin: 0 0 0.25em 0;
         line-height: 1.1;
       }
       .business-header--content > p {
         color: #333;
-        margin-top: 0.5em;
-        margin-bottom: 1em;
+        margin: 0 0 1em 0;
         line-height: 1.4;
       }
 
       .cta-button {
         display: inline-block;
         background: #d32f2f;
-        margin-top: 0.875em;
         outline: 0;
         color: #fff;
         border-radius: 32px;
         padding: 1rem 3rem;
         border: 2px solid #c73030;
         font-size: 1rem;
-        font-family: 'proxima-soft', sans-serif;
+        font-family: "proxima-nova", sans-serif;
         font-style: normal;
         font-weight: 300;
         cursor: pointer;

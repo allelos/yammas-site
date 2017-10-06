@@ -55,6 +55,9 @@ const WhatWeOffer = () => (
         color: #333;
         font-size: 1.5em;
       }
+      .whatweoffer--title > h1 {
+        margin-bottom: 0;
+      }
       .whatweoffer--grid {
         display: flex;
         flex: 1 100%;
@@ -112,11 +115,10 @@ const WhatWeOffer = () => (
       }
       @media (max-width: 767px) {
         .whatweoffer--grid {
-          min-height: 750px;
+          //min-height: 750px;
         }
         .offerbox--container {
-          flex: 1 100%;
-          margin-bottom: 2em;
+          flex-basis: 100%;
         }
       }
     `}</style>

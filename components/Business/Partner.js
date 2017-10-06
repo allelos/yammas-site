@@ -28,22 +28,31 @@ const Partner = () => (
         color: #333;
         font-size: 1.5em;
       }
+      .partner--title > h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
       .partner--subtitle {
         width: 300px;
         font-size: 1.25em;
-        text-align: center;
         color: #333;
-        margin-top: 0.5em;
+      }
+      .partner--subtitle > p {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 1.25em 0 1.25em 0;
+        text-align: left;
       }
       .parnter--form {
-        padding-top: 1.5em;
         padding-bottom: 1.5em;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 767px) {
         .partner--subtitle {
-          text-align: left;
           width: 400px;
+        }
+        .partner--subtitle > p {
+          text-align: center;
         }
       }
 

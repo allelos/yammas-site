@@ -2,6 +2,7 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
 import Typekit from 'react-typekit';
 
+
 export default class YammasDocument extends Document {
   static getInitialProps({ renderPage }) {
     const { html, head, errorHtml, chunks } = renderPage();
@@ -19,6 +20,10 @@ export default class YammasDocument extends Document {
           <link
             rel="icon"
             href='https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/Yammas-02.png'
+          />
+          <link
+            rel="stylesheet"
+            href="/static/css/sanitize.css"
           />
           <link
             rel="stylesheet"
@@ -93,7 +98,7 @@ export default class YammasDocument extends Document {
             }
             
             p { 
-              font-family: 'proxima-soft', sans-serif;
+              font-family: 'proxima-nova', sans-serif;
               font-size: 1em;
               font-style: normal;
               font-weight: 300;
