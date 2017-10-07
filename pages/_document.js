@@ -17,6 +17,7 @@ export default class YammasDocument extends Document {
           <title>Yammas!</title>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+          <Typekit kitId="rfe5wwj" />
           <link
             rel="icon"
             href='https://s3-eu-west-1.amazonaws.com/yammas-s3-bucket-storage/img/Yammas-02.png'
@@ -31,7 +32,6 @@ export default class YammasDocument extends Document {
           />
         </Head>
         <body>
-          <Typekit kitId="rfe5wwj" />
           <Main />
           <NextScript />
         </body>
@@ -50,9 +50,9 @@ export default class YammasDocument extends Document {
               --step-down-5: 0.5em;
             }
             html {
-              position: relative;
-              height: auto;
-              min-height: 100%;
+              //position: relative;
+              //height: auto;
+              //min-height: 100%;
             }
             body {
               padding: 0;

@@ -133,7 +133,7 @@ const Footer = () => (
       }
       .awards {
         display: flex;
-        flex: 1 1 100%;
+        flex: 1 0 100%;
         align-items: flex-start;
       }
       .awards > img {
@@ -156,7 +156,7 @@ const Footer = () => (
           margin-top: 2rem;
         }
         footer > div {
-          flex: 1 100%;
+          flex: 1 0 100%;
           margin-bottom: 2rem;
         }
       }

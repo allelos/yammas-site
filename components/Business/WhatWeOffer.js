@@ -58,7 +58,8 @@ const WhatWeOffer = () => (
         text-align: center;
       }
       .whatweoffer--grid {
-        flex: 1 0 100%;
+        display: flex;
+        flex: 1 1 auto;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
