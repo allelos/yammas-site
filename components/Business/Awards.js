@@ -40,6 +40,9 @@ const Awards = () => (
       }
       .awards--right > p {
         font-size: 0.75em;
+        font-family: "proxima soft", sans-serif;
+        font-weight: 300;
+        font-style: normal;
         text-align: right;
         line-height: 1.4;
         color: #f7f7f7;

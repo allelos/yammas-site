@@ -33,6 +33,9 @@ const Header = () => (
         color: #333;
         margin: 0 0 1em 0;
         line-height: 1.4;
+        font-family: "proxima soft", sans-serif;
+        font-weight: 300;
+        font-style: normal;
       }
 
       .cta-button {

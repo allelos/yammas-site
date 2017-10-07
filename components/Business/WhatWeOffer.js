@@ -87,7 +87,9 @@ const WhatWeOffer = () => (
       .offerbox--container > p {
         color: #333;
         text-align: center;
+        font-family: "proxima soft", sans-serif;
         font-weight: 300;
+        font-style: normal;
         font-size: 1.25em;
         margin-top: 0;
         line-height: 1.4;
