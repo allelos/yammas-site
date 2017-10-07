@@ -31,9 +31,9 @@ export default class YammasDocument extends Document {
           />
         </Head>
         <body>
+          <Typekit kitId="rfe5wwj" />
           <Main />
           <NextScript />
-          <Typekit kitId="rfe5wwj" />
         </body>
           <style jsx global>{`
             :root {
