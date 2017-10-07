@@ -45,6 +45,7 @@ class BusinessLandingPage extends React.Component {
           .business-container {
             display: flex;
             flex-direction: column;
+            flex: 1;
           }
         `}</style>
       </div>

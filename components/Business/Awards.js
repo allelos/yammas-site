@@ -19,7 +19,7 @@ const Awards = () => (
         flex-direction: row;
         flex-wrap: wrap;
         min-height: 50vh;
-        min-width: 100vw;
+        width: 100vw;
       }
       .awards--right {
         box-sizing: border-box;

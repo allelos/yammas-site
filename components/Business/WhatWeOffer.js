@@ -46,27 +46,25 @@ const WhatWeOffer = () => (
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        min-height: 50vh;
-        min-width: 100vw;
         align-items: center;
       }
       .whatweoffer--title {
-        flex: 1 100%;
-        color: #333;
         font-size: 1.5em;
+        color: #333;
       }
       .whatweoffer--title > h1 {
         margin-bottom: 0;
+        margin-top: 0;
+        text-align: center;
       }
       .whatweoffer--grid {
-        display: flex;
-        flex: 1 100%;
+        flex: 1 0 100%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
-        margin-top: 4em;
-        margin-bottom: 4em;
+        padding-top: 3em;
+        padding-bottom: 3em;
         padding-left: 1em;
         padding-right: 1em;
       }
@@ -79,6 +77,7 @@ const WhatWeOffer = () => (
         align-items: center;
         padding-left: 1.5em;
         padding-right: 1.5em;
+        margin: 0;  
       }
       .offerbox--container > h3 {
         color: #333;
@@ -107,18 +106,19 @@ const WhatWeOffer = () => (
         box-sizing: border-box;
         background: #d32f2f;
         border: 1px solid #d32f2f;
-        margin-top: 0.25rem;
+        margin-top: 0.25em;
         margin-bottom: 0.25rem;
         margin-left: 0;
         margin-right: 0;
         width: 33%;
       }
       @media (max-width: 767px) {
-        .whatweoffer--grid {
-          //min-height: 750px;
-        }
         .offerbox--container {
-          flex-basis: 100%;
+          flex: 1 0 100%;
+        }
+        .whatweoffer--grid {
+          padding-top: 2em;
+          padding-bottom: 2em;
         }
       }
     `}</style>

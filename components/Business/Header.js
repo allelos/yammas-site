@@ -14,8 +14,8 @@ const Header = () => (
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        min-height: calc(100vh - 64px);
-        min-width: 100vw;
+        height: calc(100vh - 64px);
+        width: 100vw;
         justify-content: center;
         align-items: center;
       }
