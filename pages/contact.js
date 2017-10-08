@@ -1,5 +1,8 @@
+import React from 'react';
 import Link from 'next/link';
 import fetch from 'unfetch';
+
+import { initGA, logPageView } from '../utilities/analytics';
 
 import MediaQuery from 'react-responsive';
 import FontAwesome from 'react-fontawesome';
@@ -25,6 +28,14 @@ class Contact extends React.Component {
       success: false,
       error: '',
     }
+  }
+
+  componentDidMount () {
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
   }
 
   postData = (firstName, lastName, email, subject, message) => {
