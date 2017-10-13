@@ -1,21 +1,14 @@
 import React from 'react';
-import { initGA, logPageView } from '../utilities/analytics';
 
 import BusinessLandingPage from '../components/Business/BusinessLandingPage';
-
+import Layout from '../components/Layout/Layout';
 
 class Business extends React.Component {
-  componentDidMount () {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-    }
-    logPageView()
-  }
-
   render() {
     return (
-      <BusinessLandingPage />
+      <Layout title="Για επιχειρήσεις">
+        <BusinessLandingPage />
+      </Layout>
     );
   }
 } 

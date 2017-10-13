@@ -17,10 +17,10 @@ const Navbar = ({ ...props }) => (
     </Link>
     <div className={props.theme === 'dark' ? 'navbar-links dark' : 'navbar-links light'}>
       <ul>
-        <Link href="/contact">
+        <Link prefetch href="/contact">
           <li><a>Επικοινωνία</a></li>
         </Link>
-        <Link href="/business">
+        <Link prefetch href="/business">
           <li>Για επιχειρήσεις</li>
         </Link>
       </ul>
