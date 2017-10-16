@@ -10,7 +10,7 @@ const Testimonials = () => (
       <div className="testimonials-grid--row">
         <div className="testimonials-grid--col">
           <div className="img-container star">
-            <a target="_blank" href="https://www.youtube.com/watch?v=r2qhhXobFlw" />
+            <a target="_blank" href="https://www.youtube.com/watch?v=y_Hc7Fm6Ymc&feature=youtu.be" />
             <img className="testimonials-img" src="http://www.star.gr/public/assets/images/logo.png" />
           </div>
         </div>
