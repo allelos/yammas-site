@@ -71,4 +71,16 @@ export const global =`
       font-size: 12px;
     }
   }
+  .markdown > h3 { 
+    color: #484848;
+    font-family: 'proxima-nova', sans -serif;
+    font-weight: 500;
+    margin-top: 1.5rem;
+  }
+  .markdown > ul > li {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #484848;
+  }
 `;
