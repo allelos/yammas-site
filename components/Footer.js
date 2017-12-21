@@ -12,6 +12,9 @@ const Footer = () => (
         <Link href="/contact">
           <a href="" className="link">Επικοινωνία</a>
         </Link>
+        <Link href="/terms">
+          <a href="" className="link">Όροι Χρήσης</a>
+        </Link>
       </div>
       <div className="copyright">
         <span>2016-2017 Yammas. All Rights Reserved</span>
@@ -42,7 +45,7 @@ const Footer = () => (
           <h5>Διακρίσεις</h5>
         </div>
         <div className="awards">
-          <img src="https://ovolus.com/sites/all/themes/mazeblock_theme/images/befinnovative.svg" />
+          <img src="/static/img/befinnovative_logo.png" />
         </div>
     </div>
     <style jsx>{`
@@ -133,13 +136,13 @@ const Footer = () => (
       }
       .awards {
         display: flex;
-        flex: 1 0 100%;
+        flex: 1 1 auto;
         align-items: flex-start;
       }
       .awards > img {
         height: 32px;
+        width: auto;
         background: #fff;
-        padding: 4px;
         border-radius: 4px;
       }
       @media (max-width: 768px) {
