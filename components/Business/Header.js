@@ -33,7 +33,7 @@ const Header = () => (
         color: #333;
         margin: 0 0 1em 0;
         line-height: 1.4;
-        font-family: "proxima soft", sans-serif;
+        font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: 300;
         font-style: normal;
       }
@@ -47,9 +47,9 @@ const Header = () => (
         padding: 1rem 3rem;
         border: 2px solid #c73030;
         font-size: 1rem;
-        font-family: "proxima-nova", sans-serif;
+        font-family: "Gotham SSm A", "Gotham SSm B";
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         cursor: pointer;
         box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         transition: all 125ms ease-in-out;

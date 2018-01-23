@@ -138,7 +138,7 @@ class SubscribeForm extends React.Component {
           .input-box[type="email"] {
             box-sizing: border-box;
             padding: 0.875em 1em;
-            font-family: "proxima-soft", sans-serif;
+            font-family: "Gotham SSm A", "Gotham SSm B";
             border-top-left-radius: 32px;
             border-bottom-left-radius: 32px;
             border: 1px solid white;
@@ -155,8 +155,8 @@ class SubscribeForm extends React.Component {
             padding-bottom: 0.875em;
             width: 100px;
             font-size: 1em;
-            font-family: "proxima-soft", sans-serif;
-            font-weight: 500;
+            font-family: "Gotham SSm A", "Gotham SSm B";
+            font-weight: 300;
             font-style: normal;
             text-align: center;
             background: #fff;

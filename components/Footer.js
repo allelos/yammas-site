@@ -108,7 +108,8 @@ const Footer = () => (
         background: #2b2b2b;
       }
       .link {
-        font-family: "proxima-soft", sans-serif;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: 300;
         font-size: var(--step-down-1);
         text-decoration: none;
         color: #7b7b7b;
@@ -119,7 +120,8 @@ const Footer = () => (
         color: #a5a5a5;
       }
       .copyright {
-        font-family: "proxima-soft", sans-serif;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: 300;
         font-size: var(--step-down-1);
         color: #525050;
       }

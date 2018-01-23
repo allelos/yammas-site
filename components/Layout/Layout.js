@@ -1,28 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import Head from 'next/head';
-import Typekit from 'react-typekit';
+import Head from "next/head";
 
-import { initGA, logPageView } from '../../utilities/analytics';
+import { initGA, logPageView } from "../../utilities/analytics";
 
-import { global } from './globalStyles';
+import { global } from "./globalStyles";
 
 class Layout extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
+      initGA();
+      window.GA_INITIALIZED = true;
     }
-    logPageView()
+    logPageView();
   }
 
   render() {
     const { children, title } = this.props;
-    return(
+    return (
       <div>
         <Head>
           <title>Yammas! | {title}</title>
@@ -32,18 +31,21 @@ class Layout extends React.Component {
             content="initial-scale=1.0"
             width="width=device-width"
           />
-          <Typekit kitId="rfe5wwj" />
           <link
             rel="stylesheet"
-            href="/static/css/sanitize.css"
+            type="text/css"
+            href="https://cloud.typography.com/7910556/6405392/css/fonts.css"
           />
+          <link rel="stylesheet" href="/static/css/sanitize.css" />
           <link
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           />
         </Head>
         {children}
-        <style jsx global>{global}</style>
+        <style jsx global>
+          {global}
+        </style>
       </div>
     );
   }

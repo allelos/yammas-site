@@ -105,10 +105,11 @@ class Input extends React.Component {
           }
           .input-placeholder {
             display: block;
-            font-family: "proxima-soft", sans-serif;
-            font-weight: 400;
+            font-family: "Gotham SSm A", "Gotham SSm B";
+            font-weight: 300;
             color: #888;
             pointer-events: none;
+            padding-left: 0.5rem;
           }
           .input-placeholder.error {
            color: #d32f2f;

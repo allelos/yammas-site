@@ -13,8 +13,8 @@ const Button = ({ ...props }) => (
         cursor: pointer;
         padding: 0.875em 1.5em;
         font-size: 0.875em;
-        font-family: "proxima-soft", sans-serif;
-        font-weight: 300;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: 400;
       }
       .yammas-button--square.disabled {
         opacity: 0.5;

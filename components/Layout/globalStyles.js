@@ -27,9 +27,9 @@ export const global =`
   h1, h2, h3,
   h4, h5, h6 {
     margin: 0 0 0.125em 0;
-    font-family: 'proxima-nova', sans-serif;
+    font-family: "Gotham SSm A", "Gotham SSm B";
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.4em;
   }
 
@@ -54,17 +54,17 @@ export const global =`
   }
 
   li {
-    font-family: 'proxima-soft', sans-serif;
+    font-family: "Gotham SSm A", "Gotham SSm B";
     font-size: 1em;
     font-style: normal;
     font-weight: 300;
   }
 
   p { 
-    font-family: 'proxima-nova', sans-serif;
+    font-family: "Gotham SSm A", "Gotham SSm B";
     font-size: 1em;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
   }
   @media (max-width: 768px) {
     body {
@@ -73,14 +73,14 @@ export const global =`
   }
   .markdown > h3 { 
     color: #484848;
-    font-family: 'proxima-nova', sans -serif;
-    font-weight: 500;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-weight: 700;
     margin-top: 1.5rem;
   }
   .markdown > ul > li {
-    font-family: 'proxima-nova', sans-serif;
+    font-family: "Gotham SSm A", "Gotham SSm B";
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
     color: #484848;
   }
 `;

@@ -42,8 +42,8 @@ const Partner = () => (
         margin-bottom: 0;
         padding: 1.25em 0 1.25em 0;
         text-align: left;
-        font-family: "proxima soft", sans-serif;
-        font-weight: 300;
+        font-family: "Gotham SSm A", "Gotham SSm B";
+        font-weight: 200;
         font-style: normal;
       }
       .parnter--form {

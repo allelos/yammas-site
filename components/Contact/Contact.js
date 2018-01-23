@@ -12,7 +12,7 @@ import Input from '../../components/Input/Input';
 import TextArea from '../../components/Input/TextArea';
 import Button from '../../components/Button/ButtonIcon';
 
-const URL = 'http://yammas-env.zqwncmndy4.eu-central-1.elasticbeanstalk.com/api/contact/'
+const URL = 'http://api.yammas.gr/api/contact/'
 
 class Contact extends React.Component {
   constructor(props) {

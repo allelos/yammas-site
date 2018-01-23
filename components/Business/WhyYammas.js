@@ -132,7 +132,7 @@ const WhyYammas = () => (
       }
       .whyyammas--right--item > p {
         font-size: 1.5em;
-        font-family: "proxima soft", sans-serif;
+        font-family: "Gotham SSm A", "Gotham SSm B";
         font-weight: 300;
         font-style: normal;
         color: #333;

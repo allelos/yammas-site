@@ -8,7 +8,7 @@ import FontAwesome from 'react-fontawesome';
 import Input from '../Input/Input';
 import Button from '../Button/ButtonIcon';
 
-const URL = 'http://yammas-env.zqwncmndy4.eu-central-1.elasticbeanstalk.com/api/business/'
+const URL = 'http://api.yammas.gr/api/business/'
 
 class PartnerForm extends React.Component {
   constructor(props) {
